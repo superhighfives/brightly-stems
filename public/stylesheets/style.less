@@ -29,6 +29,8 @@
 
 body { color: @text-color; font-family: @font-stack; padding-top: @layout-top; background: url(@background-path) top center; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
 
+.arrows { position: absolute; top: 0; left: 0; width: 100%; height: @arrows-height; background: url(@arrows-path) top center no-repeat; z-index: 0; }
+
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 h1, h2 { font-family: @heading; font-size: @text-large; text-transform: uppercase; line-height: @text-lineheight; }
 h2 { font-family: @heading-italic; }
@@ -61,7 +63,7 @@ a, a:visited { color: @site-highlight;
 
 :last-child { margin-bottom: 0; }
 
-.container { background: url(@dashed-path) repeat-x bottom; padding-bottom: @layout-gutters; margin-bottom: @layout-gutters;
+.container { background: url(@dashed-path) repeat-x bottom; padding-bottom: @layout-gutters; margin-bottom: @layout-gutters; z-index: 10; position: relative;
   &.last { margin-bottom: 0; }
   &.footer { background: @white; margin-bottom: 0; padding-top: @layout-gutters;
     ul { margin: 0;

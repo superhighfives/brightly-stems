@@ -52,12 +52,12 @@ body {
   line-height: 1.4;
 }
 ::-moz-selection {
-  background: #fe57a1;
+  background: #d2232a;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #fe57a1;
+  background: #d2232a;
   color: #fff;
   text-shadow: none;
 }
@@ -283,6 +283,15 @@ body {
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
 }
+.arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 415px;
+  background: url('../images/bg-arrows.png') top center no-repeat;
+  z-index: 0;
+}
 h1,
 h2,
 h3,
@@ -393,6 +402,8 @@ a:visited.album:hover h3 {
   background: url('../images/bg-dashed.gif') repeat-x bottom;
   padding-bottom: 24px;
   margin-bottom: 24px;
+  z-index: 10;
+  position: relative;
 }
 .container.last {
   margin-bottom: 0;

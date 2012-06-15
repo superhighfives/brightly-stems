@@ -1,19 +1,77 @@
+@import "/public/stylesheets/variables.less";
 @import "/public/stylesheets/normalize.less";
 
-
 /* ===== Primary Styles ========================================================
-   Author:
+   Author: Charlie Gleason
    ========================================================================== */
 
+@font-face {
+    font-family: @heading;
+    src: url("../fonts/grotesquemtstd-light-webfont.eot");
+    src: url("../fonts/grotesquemtstd-light-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/grotesquemtstd-light-webfont.woff") format("woff"),
+         url("../fonts/grotesquemtstd-light-webfont.ttf") format("truetype"),
+         url("../fonts/grotesquemtstd-light-webfont.svg#GrotesqueMTStdLight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: @heading-italic;
+    src: url("../fonts/grotesquemtstd-lightitalic-webfont.eot");
+    src: url("../fonts/grotesquemtstd-lightitalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/grotesquemtstd-lightitalic-webfont.woff") format("woff"),
+         url("../fonts/grotesquemtstd-lightitalic-webfont.ttf") format("truetype"),
+         url("../fonts/grotesquemtstd-lightitalic-webfont.svg#GrotesqueMTStdLightItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 
+body { color: @text-color; font-family: @font-stack; padding-top: @layout-top; background: url(@background-path) top center; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
 
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1, h2 { font-family: @heading; font-size: @text-large; text-transform: uppercase; line-height: @text-lineheight; }
+h2 { font-family: @heading-italic; }
+h3, h4, h5, h6, ul li { font-family: @font-stack; font-size: @text-normal; font-weight: normal; color: @site-lowlight; }
+h3 { font-weight: bold; text-transform: uppercase; color: @text-color; }
 
+ul { list-style: none; padding: 0;
+  &.tracks li a { display: block; padding: @layout-gutters; background: @site-extralowlight; margin-bottom: 1px; border-left: 2px solid @site-midlight; text-decoration: none; color: @text-color;
+    .title { color: @site-highlight; }
+    .filesize { color: @site-lowlight; }
+    &:hover { background: @site-highlight; border-color: @site-highlight;
+      .title { color: @white; border-bottom: 1px solid @white; }
+      .filesize { color: @white;  }
+    }
+  }
+}
 
+p { font-size: @text-normal; }
+a, a:visited { color: @site-highlight;
+  &:hover { color: @white; }
+  &.album { color: @text-color; 
+    img { -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
+    h3 { padding-top: @layout-gutters; }
+    &:hover { color: @site-highlight;
+      img { -webkit-box-shadow: 0px 0px 10px 0px @site-lowlight; box-shadow: 0px 0px 10px 0px @site-lowlight; }
+      h3 { color: @site-highlight; }
+    }
+  }
+}
 
+:last-child { margin-bottom: 0; }
 
-
-
+.container { background: url(@dashed-path) repeat-x bottom; padding-bottom: @layout-gutters; margin-bottom: @layout-gutters;
+  &.last { margin-bottom: 0; }
+  &.footer { background: @white; margin-bottom: 0; padding-top: @layout-gutters;
+    ul { margin: 0;
+      li { color: @site-midlight;
+        a { color: @site-lowlight; }
+      }
+    }
+  }
+}
+.content { width: @layout-width; padding: 0 @layout-gutters; margin: 0 auto; }
 
 @import "/public/stylesheets/media-queries.less";
 @import "/public/stylesheets/helpers.less";

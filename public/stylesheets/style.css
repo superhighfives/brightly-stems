@@ -325,42 +325,13 @@ h3 {
   text-transform: uppercase;
   color: #000000;
 }
-ul {
-  list-style: none;
-  padding: 0;
-}
-ul.tracks li a {
-  display: block;
-  padding: 24px;
-  background: #d6d6d6;
-  margin-bottom: 1px;
-  border-left: 2px solid #999999;
-  text-decoration: none;
-  color: #000000;
-}
-ul.tracks li a .title {
-  color: #d2232a;
-}
-ul.tracks li a .filesize {
-  color: #666666;
-}
-ul.tracks li a:hover {
-  background: #d2232a;
-  border-color: #d2232a;
-}
-ul.tracks li a:hover .title {
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-}
-ul.tracks li a:hover .filesize {
-  color: #ffffff;
-}
 p {
   font-size: 0.75em;
 }
 a,
 a:visited {
   color: #d2232a;
+  font-weight: bold;
 }
 a:hover,
 a:visited:hover {
@@ -394,6 +365,37 @@ a:visited.album:hover img {
 a.album:hover h3,
 a:visited.album:hover h3 {
   color: #d2232a;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul.tracks li a {
+  display: block;
+  padding: 24px;
+  background: #d6d6d6;
+  margin-bottom: 1px;
+  border-left: 2px solid #999999;
+  text-decoration: none;
+  color: #000000;
+}
+ul.tracks li a .title {
+  color: #d2232a;
+}
+ul.tracks li a .filesize {
+  color: #666666;
+}
+ul.tracks li a:hover {
+  background: #d2232a;
+  border-color: #d2232a;
+  color: #ffffff;
+}
+ul.tracks li a:hover .title {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+ul.tracks li a:hover .filesize {
+  color: #ffffff;
 }
 :last-child {
   margin-bottom: 0;

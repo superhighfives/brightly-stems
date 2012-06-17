@@ -10,6 +10,7 @@ var app = module.exports = express.createServer();
 // Configuration
 
 app.configure(function(){
+  app.use(express.favicon(__dirname + '/public/icons/favicon.ico'));
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
